@@ -1,0 +1,126 @@
+<div class="breadcrump">
+    <div class="container">
+        <div class="breadcrump-list">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Trang chủ</li>
+                  <li class="breadcrumb-item active" aria-current="page">Giỏ hàng</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</div>
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-9 col-xs-12">
+                    <h1 class="heading-cart">Giỏ hàng của bạn</h1>
+                    <div class="list-pageform-cart">
+                        <form action="/cart" method="post" id="cartformpage">
+                            <div class="cart-row">
+                                <h2 class="title-number-cart count-cart">
+                                    Bạn đang có <span style="color: red;">{{cartLength}}</span> sản phẩm trong giỏ hàng
+                                </h2>
+                                <div class="table-cart" ng-repeat="cart in carts">
+                                    <div class="item line-item line-item-container" data-variant-id="1040409930">
+                                        <div class="left">
+                                            <div class="item-img">
+                                                <a href="/products/adidas-ultra-boost-m">
+                                                    <img style="width: 70px; height: 70px;" src="{{cart.product_avatar}}" alt="{{cart.product_name}}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <div class="item-info">
+                                                <a href="/products/adidas-ultra-boost-m">
+                                                    <h3>{{cart.product_name}}</h3>
+                                                    <div class="item-desc">
+                                                        <span class="variant_title">{{cart.color}} / {{cart.size}}</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item-quan">
+                                                <div class="qty quantity-partent qty-click clearfix">
+                                                    <button type="button" class="qtyminus qty-btn" ng-click="handleDecrease(cart.id)" >-</button>
+                                                    <input type="text"  ng-model="cart.quanlity"  min="1"  max="6" class="tc line-item-qty item-quantity">
+                                                    <button type="button" class="qtyplus qty-btn"ng-click="handleIncrease(cart.id)">+</button>
+                                                </div>
+                                            </div>
+                                            <div class="item-price">
+                                                <p>
+                                                    <span>{{VND.format(cart.price)}}</span>
+                                                </p>
+                                            </div>
+                                            <div class="item-total-price">
+                                                <div class="price">
+                                                    <span class="text">Thành tiền:</span>
+                                                    <span class="line-item-total">{{VND.format(cart.total_price)}}</span>
+                                                </div>
+                                                <div class="remove">
+                                                    <span class="cart_remove cart_remove-big" ng-click="handleRemoveCart(cart.id)"><i class="lni lni-trash-can"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="cart-row">
+                                <div class="row note-block">
+                                    <div class="col-md-5 col-xs-12 cart-left-block">
+                                        <div class="checkout-buttons clearfix">
+                                            <label for="note" class="note-label">Ghi chú đơn hàng</label>
+                                            <textarea class="form-control" id="note" name="note" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-xs-12 cart-right-block">
+                                        
+                                        <div class="policy_return">
+                                            <h4>Chính sách Đổi/Trả</h4>
+                                            <ul>
+                                                <li>Sản phẩm được đổi 1 lần duy nhất, không hỗ trợ trả.</li>
+                                                <li>Sản phẩm còn đủ tem mác, chưa qua sử dụng.</li>
+                                                <li>Sản phẩm nguyên giá được đổi trong 30 ngày trên toàn hệ thống.</li>
+                                                <li>Sản phẩm sale chỉ hỗ trợ đổi size (nếu cửa hàng còn) trong 7 ngày trên toàn hệ thống.</li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 col-xs-12">
+                    <div class="sidebar-cart-fix">
+                        <a href="./danhsachsp.html" class="continued d-block text-end mb-2">Tiếp tục mua hàng →</a>
+                        <div class="order-summary-block">
+                            <h2 class="order-summary-title">Thông tin đơn hàng</h2>
+                            <div class="summary-subtotal hidden">
+                                <p class="subtotal">Tạm tính:
+                                    <span class="cart-total-price">
+                                       {{VND.format(totalPrice)}}
+                                    </span>
+                                </p>
+                                <p class="shipping clearfix">Phí vận chuyển:
+                                    <span>---</span>
+                                </p>
+                            </div>
+                            <div class="summary-total">
+                                <p>Tổng tiền: <span>   {{VND.format(totalPrice)}}</span>
+                                </p>
+                            </div>
+                            <div class="summary-action">
+                                <p>Bạn có thể nhập mã giảm giá ở trang thanh toán</p>
+                                <a class="checkout-btn" href="#!/checkout">THANH TOÁN</a>
+                            </div>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+   </main>

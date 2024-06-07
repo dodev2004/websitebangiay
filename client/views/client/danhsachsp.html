@@ -1,0 +1,213 @@
+<div class="breadcrump">
+    <div class="container">
+        <div class="breadcrump-list">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Trang chủ</li>
+                  <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 padding-0-15">
+                <div class="layered">
+                    <h2 style="margin: 30px 0;" class="title">Lọc sản phẩm </h2>
+                    <div class="block_content">
+                        <div class="group-filter">
+                            <div class="layered_subtitle dropdown-filter">
+                                <span>Thương hiệu</span>
+                                <span class="icon-control"><i class="fa fa-minus"></i>
+                                </span>
+                            </div>
+                            <div class="layered-content bl-filter filter-brand">
+                                <ul style="column-gap: 12px; flex-wrap: wrap;  row-gap: 8px;" class="check-box-list d-flex"> 
+                                    <li>
+                                        <input type="checkbox" id="data-brand-p1" value="Khác" name="brand-filter" data-vendor="(vendor:product=Khác)">
+                                        <label for="data-brand-p1">Khác</label>   
+                                    </li>
+                                    <li ng-repeat="category in categorys">
+                                        <input type="checkbox" id="data-brand-{{category.id}}" ng-model="ischecked[category.id]" data-category="category" data-filter="{{category.category_name}}" ng-click="handleFilter(category.id)"  name="brand-filter">
+                                        <label for="data-brand-{{category.id}}">{{category.category_name}}</label>   
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="group-filter" aria-expanded="true">
+                                <div class="layered_subtitle dropdown-filter"><span>Giá sản phẩm</span><span class="icon-control"><i class="fa fa-minus"></i></span></div>
+                                <div class="layered-content bl-filter filter-price">
+                                    <ul class="check-box-list">
+                                        <li class="">
+                                            <input type="checkbox" id="p1" name="cc" data-price="<=500000"  data-category="price" data-min="0" data-max="500000"  ng-click="handleFilter()">
+                                            <label for="p1">
+                                                <span>Dưới</span> 500,000₫
+                                            </label>   
+                                        </li>
+                                        <li class="">
+                                            <input type="checkbox" id="p2" name="cc" data-category="price" data-min="500000" data-max="1000000"  ng-click="handleFilter()">
+                                            <label for="p2">
+                                                500,000₫ - 1,000,000₫
+                                            </label>   
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="p3" name="cc"  data-category="price" data-min="1000000" data-max="1500000"  ng-click="handleFilter()">
+                                            <label for="p3">
+                                                1,000,000₫ - 1,500,000₫
+                                            </label>   
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="p4" name="cc"  data-category="price" data-min="2000000" data-max="5000000"  ng-click="handleFilter()">
+                                            <label for="p4">
+                                                2,000,000₫ - 5,000,000₫
+                                            </label>   
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="group-filter" aria-expanded="true">
+                                <div class="layered_subtitle dropdown-filter"><span>Màu sắc</span><span class="icon-control"><i class="fa fa-minus"></i></span></div>
+                                <div class="layered-content filter-color s-filter">
+                                    <ul class="check-box-list">
+                                        <li>
+                                            <input type="checkbox" id="data-color-p1"  data-category="color" data-color="Cam"  ng-click="handleFilter()"  >
+                                            <label for="data-color-p1" style="background-color: #fb4727"></label>  
+                                        </li>    
+                                        <li>
+                                            <input type="checkbox" id="data-color-p2" data-category="color" data-color="Kem"  ng-click="handleFilter()" data-color="(variant:product**Kem)">
+                                            <label for="data-color-p2" style="background-color: #fdfaef"></label>  
+                                        </li>    
+                                        <li>
+                                            <input type="checkbox" id="data-color-p3" data-category="color" data-color="Tím"  ng-click="handleFilter()">
+                                            <label for="data-color-p3" style="background-color: #3e3473"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p4" data-category="color" data-color="Trắng"  ng-click="handleFilter()">
+                                            <label for="data-color-p4" style="background-color: #ffffff"></label>  
+                                        </li>         
+                                        <li>
+                                            <input type="checkbox" id="data-color-p6" data-category="color" data-color="Xám"  ng-click="handleFilter()">
+                                            <label for="data-color-p6" style="background-color: #cecec8"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p7" data-category="color" data-color="Xanh"  ng-click="handleFilter()"">
+                                            <label for="data-color-p7" style="background-color: #6daef4"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p8" data-category="color" data-color="Đen"  ng-click="handleFilter()">
+                                            <label for="data-color-p8" style="background-color: #000000"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p9" data-category="color" data-color="Đỏ"  ng-click="handleFilter()">
+                                            <label for="data-color-p9" style="background-color: #e2262a"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p10" data-category="color" data-color="Hồng"  ng-click="handleFilter()">
+                                            <label for="data-color-p10" style="background-color: #ee8aa1"></label>  
+                                        </li>     
+                                        <li>
+                                            <input type="checkbox" id="data-color-p11" data-category="color" data-color="Rêu"  ng-click="handleFilter()">
+                                            <label for="data-color-p11" style="background-color: #4a5250"></label>  
+                                        </li>     
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="group-filter" aria-expanded="true">
+                                <div class="layered_subtitle dropdown-filter"><span>Kích thước</span><span class="icon-control"><i class="fa fa-minus"></i></span></div>
+                                <div class="layered-content filter-size s-filter">
+                                    
+                                    <ul class="check-box-list clearfix">
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p1" value="35" name="size-filter" data-size="(variant:product=35)">
+                                            <label for="data-size-p1">35</label>   
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p2" value="36" name="size-filter" data-size="(variant:product=36)">
+                                            <label for="data-size-p2">36</label>   
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p3" value="37" name="size-filter" data-size="(variant:product=37)">
+                                            <label for="data-size-p3">37</label>   
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p4" value="38" name="size-filter" data-size="(variant:product=38)">
+                                            <label for="data-size-p4">38</label>   
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p5" value="39" name="size-filter" data-size="(variant:product=39)">
+                                            <label for="data-size-p5">39</label>   
+                                        </li>
+                                        
+                                        <li>
+                                            <input type="checkbox" id="data-size-p6" value="40" name="size-filter" data-size="(variant:product=40)">
+                                            <label for="data-size-p6">40</label>   
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="wrap-collection-title row">
+                    <div class="heading-collection row">
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <h1 class="title">
+                                Tất cả sản phẩm
+                            </h1>
+                            
+                            <div class="alert-no-filter" style="display: none;"><p>Không tìm thấy sản phẩm nào phù hợp!</p></div>		
+                            
+                        </div>
+                        
+                        <div class="col-md-4 hidden-sm hidden-xs">
+                            <div class="option browse-tags">
+                                <label class="lb-filter d-none" for="sort-by">Sắp xếp theo:</label>
+                                <span class="custom-dropdown custom-dropdown--grey">
+                                    <select class="sort-by custom-dropdown__select">
+                                        <option value="price-ascending" >Giá: Tăng dần</option>
+                                        <option value="price-descending" >Giá: Giảm dần</option>
+                                        <option value="title-ascending">Tên: A-Z</option>
+                                        <option value="title-descending" >Tên: Z-A</option>
+                                        <option value="created-ascending" >Cũ nhất</option>
+                                        <option value="created-descending">Mới nhất</option>
+                                        <option value="best-selling">Bán chạy nhất</option>
+                                        <option value="quantity-descending">Tồn kho: Giảm dần</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="product-news">
+                    <div class="product-news_content">
+                        <div class="row">
+                            <div class="col-md-3 pro-loop" ng-repeat="product in products">
+                                <div class="product_news-imgae">
+                                    <a href="#!/productdetail/{{product.id}}"> <img src="{{product.avatar}}" alt=""></a>
+                                   
+                                </div>
+                                <div class="product_news-content text-center">
+                                    <p class="product_news-name m-0">{{product.name}}</p>
+                                    <span class="product_news-price">{{VND.format(product.price)}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   </main>

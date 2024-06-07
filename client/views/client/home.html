@@ -1,0 +1,224 @@
+<main>
+    <div class="section-slider">
+    
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/slideshow_1.webp" class="d-block w-100" alt="./img/slideshow_1.webp">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slideshow_2.jpg" class="d-block w-100" alt="./img/slideshow_1.webp">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slideshow_1.webp" class="d-block w-100" alt="./img/slideshow_1.webp">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <!-- Product news -->
+    <section class="section-product section">
+        <div class="container">
+            <div class="section-product_top text-center">
+                     <p class="section-product_title">Sản phẩm mới</p>
+                     <span>Xem thêm</span>
+            </div>
+            <div class="product-news">
+                <div class="product-news_content">
+                    <div class="row">
+                        <div class="col-md-3 pro-loop" ng-repeat="product in products | orderBy : created_at|limitTo : 8">
+                            <div class="product_news-imgae">
+                                <a href="#!/productdetail/{{product.id}}"> <img src="{{product.avatar}}" alt=""></a>
+                               
+                            </div>
+                            <div class="product_news-content text-center">
+                                <p class="product_news-name m-0">{{product.name}}</p>
+                                <span class="product_news-price">{{VND.format(product.price)}}</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                   <a href="" class="link-banner ">
+                    <div class="container-image overflow-hidden">
+                        <img src="./img/block_home_category1_grande.jpg" class="d-block"  alt="">
+                    </div>
+                    <div class="caption-banner">
+                        <p>Bộ sưu tập</p>
+                        <h2>
+                            Đại sứ thương hiệu
+                        </h2>
+                    </div>
+                   </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="" class="link-banner">
+                     <div class="container-image overflow-hidden">
+                         <img src="./img/block_home_category2_grande.webp" alt="">
+                     </div>
+                     <div class="caption-banner">
+                         <p>Bộ sưu tập</p>
+                         <h2>
+                             Thương hiệu
+                         </h2>
+                     </div>
+                    </a>
+                 </div>
+                 <div class="col-md-4">
+                    <a href="" class="link-banner overflow-hidden">
+                     <div class="container-image">
+                         <img src="./img/block_home_category3_grande.webp" alt="">
+                     </div>
+                     <div class="caption-banner">
+                         <h2>
+                           Blog
+                         </h2>
+                     </div>
+                    </a>
+                 </div>
+            </div>
+        </div> 
+        
+    </section>
+    <section class="section-product section">
+        <div class="container">
+            <div class="section-product_top text-center">
+                     <p class="section-product_title">Sản phẩm bán chạy</p>
+                     <span>Xem thêm</span>
+            </div>
+            <div class="product-news">
+                <div class="product-news_content">
+                    <div class="row">
+                        <div class="col-md-3 pro-loop" ng-repeat="product in products | orderBy : total_buy |limitTo : 4">
+                            <div class="product_news-imgae">
+                                <a href="#!/productdetail/{{product.id}}">
+                                    <img src="{{product.avatar}}" alt="">
+                                </a>
+                                
+                            </div>
+                            <div class="product_news-content text-center">
+                                <p class="product_news-name m-0">{{product.name}}
+                                </p>
+                                <span class="product_news-price">{{VND.format(product.price)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-product section">
+        <div class="container">
+            <div class="section-product_top text-center">
+                     <p class="section-product_title">Bài viết mới nhất</p>
+                     <span>Xem thêm</span>
+            </div>
+            <div class="section section-news">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="news-image">
+                            <a href="">
+                                <img src="./img/nike-vapormax-plus-ao4550_900-5__1__45b7352176834c5d9bbcc9af91132edc_grande.jpg" alt="">
+                            </a>
+                            
+                        </div>
+                        <div class="section-news_decription text-center">
+                            <p class="section-news_date mb-2">THỨ BA 11-06-2023</p>
+                            <h2 class="section-news_title">
+                                <a href="">
+                                    Adidas Falcon nổi bật mùa Hè với phối màu 
+                                </a>
+                            </h2>
+                            <span>Cuối tháng 5, adidas Falcon đã cho ra mắt nhiều phối màu đón chào mùa Hè khiến giới trẻ yêu thích không thôi. Tưởng chừng thương hiệu sẽ tiếp tục...</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-image">
+                            <a href="">
+                                <img src="./img/nike-vapormax-plus-ao4550_900-5__1__45b7352176834c5d9bbcc9af91132edc_grande.jpg" alt="">
+                            </a>
+                            
+                        </div>
+                        <div class="section-news_decription text-center">
+                            <p class="section-news_date mb-2">THỨ BA 11-06-2023</p>
+                            <h2 class="section-news_title">
+                                <a href="">
+                                    Adidas Falcon nổi bật mùa Hè với phối màu 
+                                </a>
+                            </h2>
+                            <span>Cuối tháng 5, adidas Falcon đã cho ra mắt nhiều phối màu đón chào mùa Hè khiến giới trẻ yêu thích không thôi. Tưởng chừng thương hiệu sẽ tiếp tục...</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="news-image">
+                            <a href="">
+                                <img src="./img/nike-vapormax-plus-ao4550_900-5__1__45b7352176834c5d9bbcc9af91132edc_grande.jpg" alt="">
+                            </a>
+                            
+                        </div>
+                        <div class="section-news_decription text-center">
+                            <p class="section-news_date mb-2">THỨ BA 11-06-2023</p>
+                            <h2 class="section-news_title">
+                                <a href="">
+                                    Adidas Falcon nổi bật mùa Hè với phối màu 
+                                </a>
+                            </h2>
+                            <span>Cuối tháng 5, adidas Falcon đã cho ra mắt nhiều phối màu đón chào mùa Hè khiến giới trẻ yêu thích không thôi. Tưởng chừng thương hiệu sẽ tiếp tục...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-product section">
+        <div class="container-fluid">
+            <div class="section-product_top text-center">
+                <p class="section-product_title">Khách hàng và Runner In</p>
+       </div>
+       <div class="row">
+           <div class="col-md-2 p-0-2">
+               <a href="">
+                   <img src="./img/gallery_item_1.webp" alt="">
+               </a>
+           </div>
+           <div class="col-md-2 p-0-2">
+            <a href="">
+                <img src="./img/gallery_item_2.webp" alt="">
+            </a>
+           </div>
+           <div class="col-md-2 p-0-2">
+            <img src="./img/gallery_item_3.jpg" alt="">
+           </div>
+           <div class="col-md-2 p-0-2">
+            <img src="./img/gallery_item_4.webp" alt="">
+           </div>
+           <div class="col-md-2 p-0-2">
+            <img src="./img/gallery_item_5.webp" alt="">
+           </div>
+           <div class="col-md-2 p-0-2">
+            <img src="./img/gallery_item_6.jpg" alt="">
+           </div>
+       </div>
+        </div>
+            
+    </section>
+   </main>

@@ -1,0 +1,164 @@
+<div class="content d-flex">
+    <div class="wrap">
+        <div class="sidebar">
+            <div class="order-summary-sections">
+                <div class="order-summary-section order-summary-section-product-list" data-order-summary-section="line-items">
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th scope="col"><span class="visually-hidden">Hình ảnh</span></th>
+                                <th scope="col"><span class="visually-hidden">Mô tả</span></th>
+                                <th scope="col"><span class="visually-hidden">Số lượng</span></th>
+                                <th scope="col"><span class="visually-hidden">Giá</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                <tr class="product" data-product-id="1020297456" data-variant-id="1040409930" ng-repeat="cart in carts">
+                                    <td class="product-image">
+                                        <div class="product-thumbnail">
+                                            <div class="product-thumbnail-wrapper">
+                                                <img class="product-thumbnail-image" alt="Adidas Ultra Boost M" src="{{cart.product_avatar}}">
+                                            </div>
+                                            <span class="product-thumbnail-quantity" aria-hidden="true">{{cart.quanlity}}</span>
+                                        </div>
+                                    </td>
+                                    <td class="product-description">
+                                        <span class="product-description-name order-summary-emphasis">{{cart.product_name}}</span>
+                                        
+                                            <span class="product-description-variant order-summary-small-text">
+                                                {{cart.color}} / {{cart.size}}
+                                            </span>
+                                        
+                                    </td>
+                                    <td class="product-quantity visually-hidden">2</td>
+                                    <td class="product-price">
+                                        <span class="order-summary-emphasis">{{VND.format(cart.total_price)}}</span>
+                                    </td>
+                                </tr>
+                            
+                               
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="order-summary-section">
+                    <table class="w-100">
+                        <tbody>
+                            <tr class=""total-line total-line-subtotal>
+                                <td class="total-line-name">Tạm tính</td>
+                                <td class="total-line-price text-end">
+                                    <span class="order-summary-emphasis" data-checkout-subtotal-price-target="">
+                                      {{VND.format(totalPrice)}}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="total-line total-line-shipping">
+                                <td class="total-line-name">Phí vận chuyển</td>
+                                <td class="total-line-price text-end">
+                                    <span class="order-summary-emphasis" data-checkout-total-shipping-target="0">
+                                        -  
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="total-line-table-footer">
+                            <tr class="total-line">
+                                <td class="total-line-name ">
+                                    <span class="payment-due-label-total">Tổng cộng</span>
+                                </td>
+                                <td class="total-line-name text-end">
+                                    <span class="payment-due-currency">VND</span>
+                                    <span class="payment-due-price" data-checkout-payment-due-target="2024000000">
+                                     {{VND.format(totalPrice)}}
+                                    </span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-header">
+                <div class="breadcrump">
+                    <div class="container">
+                        <div class="breadcrump-list">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                  <li class="breadcrumb-item">Trang chủ</li>
+                                  <li class="breadcrumb-item active" aria-current="page">Mua hàng</li>
+                                </ol>
+                              </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="main-content">
+                <div class="step">
+                    <div class="step-sections">
+
+                    </div>
+                        <div class="section">
+                            <div class="section-header">
+                                <h2 class="section-title">Thông tin giao hàng</h2>
+                            </div>
+                            
+                            <p ng-if="status" class="section-content-text">Bạn đã có tài khoản
+                                <a href="">Đăng nhập</a>
+                            </p>
+                        </div>
+                    <form action="">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Họ và tên">
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="text" class="form-control" placeholder="Họ và tên">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="text" class="form-control" placeholder="Họ và tên">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" placeholder="Họ và tên">
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
+                            </div>
+                        </div>
+                        
+                    </form>
+                    <div class="step-footer" id="step-footer-checkout">				
+                        <form id="form_next_step" accept-charset="UTF-8" method="post">
+                            <input name="utf8" type="hidden" value="✓">
+                            <button type="submit" class="step-footer-continue-btn btn">
+                                <span class="btn-content">Tiếp tục đến phương thức thanh toán</span>
+                                <i class="btn-spinner icon icon-button-spinner"></i>
+                            </button>
+                        </form>
+                        <a class="step-footer-previous-link" href="/cart">
+                            Giỏ hàng
+                        </a>
+                    
+                
+                    </div>
+                </div>
+            </div>
+            <div class="main-footer footer-powered-by">Powered by Haravan</div>
+        </div>
+    </div>
+</div>

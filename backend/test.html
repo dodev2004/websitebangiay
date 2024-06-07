@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="validationApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS - Kiểm tra hợp lệ của form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+</head>
+<body>
+
+<div ng-controller="validationController">
+    <h2>Form Kiểm tra hợp lệ bằng AngularJS</h2>
+    <form name="myForm" ng-submit="submitForm()" novalidate>
+        <label for="name">Tên:</label>
+        <input type="text" id="name" name="name" ng-model="user.name" ng-minlength="3" ng-maxlength="10" required>
+        <div ng-messages="myForm.name.$error" ng-show="myForm.name.$touched">
+            <div ng-message="required">Tên là bắt buộc.</div>
+            <div ng-message="minlength">Tên phải có ít nhất 3 ký tự.</div>
+            <div ng-message="maxlength">Tên không được vượt quá 10 ký tự.</div>
+        </div>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ng-model="user.email" required>
+        <div ng-messages="myForm.email.$error" ng-show="myForm.email.$touched">
+            <div ng-message="required">Email là bắt buộc.</div>
+            <div ng-message="email">Địa chỉ email không hợp lệ.</div>
+        </div>
+        <br><br>
+        
+        <button type="submit" ng-disabled="myForm.$invalid">Gửi</button>
+    </form>
+</div>
+
+<script>
+var app = angular.module('validationApp', ['ngMessages']);
+
+app.controller('validationController', function($scope) {
+    $scope.submitForm = function() {
+        if ($scope.myForm.$valid) {
+            console.log('Form hợp lệ!');
+            console.log($scope.user); // Log dữ liệu người dùng nếu form hợp lệ
+            // Thêm logic gửi form ở đây (ví dụ: gửi dữ liệu đến server)
+        } else {
+            console.log('Form không hợp lệ!');
+        }
+    };
+});
+</script>
+
+</body>
+</html>

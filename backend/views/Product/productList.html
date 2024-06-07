@@ -1,0 +1,177 @@
+<main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+            <nav aria-label="breadcrumb mb-2">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Product</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Product List</li>
+                </ol>
+              </nav>
+            <div class="row">
+               <table class="table table-striped">
+                <thead>
+                    <tr style="background-color: #0e2238;">
+                        <th scope="col" class="fs-6 p-2 text-center background: #0e2238;" style="font-weight: 600; background-color: #0e2238; color: white;">ID</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">LOCALBRAND</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">NAME</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">ACTION</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">DETAILS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #0e2238;" ng-repeat="product in data">
+                        <th  class="fs-6 p-2 text-center " style="font-weight: 500; color: #6c4141;">{{product.id}}</th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">{{product.category.category_name}}</th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">{{product.name}}</th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal_delete-{{product.id}}"><i class="lni lni-trash-can"></i></button>
+                            <div class="modal fade" id="modal_delete-{{product.id}}">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                      <h4 class="modal-title fs-5 fw-medium">Xóa thành phần</h4>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                              
+                                    <!-- Modal body -->
+                                    <div class="modal-body fs-6 fw-normal">
+                                     Bạn có chắc muốn xóa thành phần khỏ danh sách vì nó có thể ảnh hưởng đến những thành phần khác trong ứng dụng.
+                                    </div>
+                              
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-target="#confirm" ng-click="deleteHanlde(product.id)" data-bs-toggle="modal">Đồng ý</button>
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                                    </div>
+                              
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="modal fade " id="confirm">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                              
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                      <h4 class="modal-title fs-5 fw-medium">Xóa thành phần</h4>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                              
+                                    <!-- Modal body -->
+                                    <div class="modal-body fs-6 fw-normal">
+                                       Xóa thành công
+                                    </div>
+                              
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đồng ý</button>
+                                    </div>
+                              
+                                  </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-info"><a href="#!/product/edit/{{product.id}}"><i class="lni lni-pencil"></i></a></button>
+                        </th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">
+                            <a href="" data-bs-toggle="modal" data-bs-target="#details-{{product.id}}">Details</a>
+                            <div class="modal fade " id="details-{{product.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-sm">
+                                    <div class="modal-content text-start">
+                                      <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="gridModalLabel">Chi tiết sản phẩm</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="container-fluid bd-example-row">
+                                            <fieldset disabled>
+                                                <div class="row">
+                                               
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">ID</label>
+                                                        <input type="text" name="id" ng-model="product.id" class="form-control">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">Thuơng hiệu</label>
+                                                        <input type="text" name="category_name" ng-model="product.category.category_name" class="form-control">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">Tên sản phẩm</label>
+                                                        <input type="text" name="product_name" ng-model="product.name" class="form-control">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">Giá</label>
+                                                        <input type="text" name="product_name" ng-model="product.price" class="form-control">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label class="mb-1 d-block" for="">Luợt bán</label>
+                                                       <input type="text" name="product_name" ng-model="product.total_buy" class="form-control">
+                                                     </div>
+                                                     <div class="form-group col-md-6">
+                                                      <label class="mb-1 d-block" for="">Lượt xem</label>
+                                                       <input type="text" name="product_name" ng-model="product.views" class="form-control">
+                                                     </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">Màu</label>
+                                                        <span ng-repeat="color in product.colors" class="show-cokor d-inline-block me-2" ng-style="renderColorElemet(color.code_color)">
+                                                        </span>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label class="mb-1 d-block" for="">Size</label>
+                                                        <button style="margin-right: 4px; margin-bottom: 2px;"  class="btn btn-dark" ng-repeat="color in product.sizes">{{color}}</button>
+                                                    </div>
+                                                    <div class="form-group col-md-12">
+                                                        <label class="mb-1 d-block" for="">Mô tả</label>
+                                                        <textarea name="" id="" class="form-control" cols="30" rows="3" ng-model="product.product_description"></textarea>
+                                                    </div>
+                                                    <div class="col-md-12 mb-2">
+                                                        <label class="mb-1 d-block" for="">Avatar</label>
+                                                    
+                                                       <img style="width: 100px;height:  100px;" src="{{product.avatar}}"  alt="">
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="mb-1 d-block" for="">Slider</label>
+                                                       <img style="width: 100px;height:  100px;" ng-repeat="slider in product.slider" class="me-2  " src="{{slider}}" alt="">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                           
+                                        </div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                              </div>
+                        </th>
+                    </tr>
+                </tbody>
+               </table>
+               <nav aria-label="Page navigation example " class="pagin">
+                <ul class="pagination justify-content-end">
+                  <li ng-if="curentPage == 1" class="page-item disabled">
+                    <a class="page-link" href="#!/product/list/{{curentPage-1}}" tabindex="-1">Previous</a>
+                  </li>
+                  <li ng-if="curentPage > 1" class="page-item">
+                    <a class="page-link" href="#!/product/list/{{curentPage-1}}" tabindex="-1">Previous</a>
+                  </li>
+                  <li ng-repeat="page in paginViews" ng-if="curentPage<=curentPage+2 && page.page>=curentPage" class="page-item">
+                    <a ng-if="page.page == curentPage" class="page-link active" href="#!/product/list/{{page.page}}">{{page.page}}</a>
+                    <a ng-if="page.page != curentPage" class="page-link" href="#!/product/list/{{page.page}}">{{page.page}}</a>
+                  </li>
+                  <li ng-if="curentPage == pagin" class="page-item disabled">
+                    <a class="page-link" href="">Next</a>
+                  </li>
+                  <li ng-if="curentPage < pagin" class="page-item">
+                    <a class="page-link" href="#!/product/list/{{1 + curentPage}}">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+    </div>
+</main>

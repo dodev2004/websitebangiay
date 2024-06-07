@@ -1,0 +1,37 @@
+<main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+            <nav aria-label="breadcrumb mb-2">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Category</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Category Edit</li>
+                </ol>
+              </nav>
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <h5 class="fw-bolder fs-7 mb-3 pt-5 text-center">Sửa thương hiệu</h5>
+                    <form  action="#" ng-submit="updateCategory()"  name="form" novalidate>
+                       <div class="form-group pt-2">
+                        <label for="">Tên thuơng hiệu </label>
+                        <input type="text" class="form-control" name="category_name" value="" ng-model="data.category_name" required >
+                        <span ng-show="form.category_name.$touched && form.category_name.$error.required">Trường này không được để trống</span>
+                       </div> 
+                       <div></div>
+                       <div class="form-group pt-2">
+                        <label for="">Mô tả</label>
+                        <textarea  class="form-control" id="" cols="30" rows="10" name="category_description" ng-model="data.category_description" required ></textarea>
+                        <span ng-show="form.category_description.$touched && form.category_description.$error.required">Trường này không được để trống</span>
+                       </div>
+                       <div class="btn-submit pt-4">
+                        <button style="background-color: #0e2238; color: white;" class="btn">Gửi</button>
+                       </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+</main>

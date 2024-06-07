@@ -1,0 +1,86 @@
+<main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+            <nav aria-label="breadcrumb mb-2">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                  <li class="breadcrumb-item " aria-current="page">Category</li>
+                  <li class="breadcrumb-item active" aria-current="page">Category List</li>
+                </ol>
+              </nav>
+            <div class="row">
+               <table class="table table-striped">
+                <thead>
+                    <tr >
+                        <th scope="col" class="fs-7 p-2 text-center " style="    font-weight: 500; color: white; background: #0e2238;"  >ID</th>
+                        <th scope="col"  class="fs-7 p-2 text-center "  style="    font-weight: 500; color: white; background: #0e2238;">LOCALBRAND</th>
+                        <th scope="col"  class="fs-7 p-2 text-center "  style="    font-weight: 500; color: white; background: #0e2238;">DESCRIPION</th>
+                        <th scope="col"  class="fs-7 p-2 text-center "  style="    font-weight: 500; color: white; background: #0e2238;">ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #0e2238;" ng-repeat="category in data">
+                        <th  class="fs-6 p-2 text-center " style="font-weight: 500; color: #6c4141;">{{category.id}}</th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">{{category.category_name}}</th>
+                        <th  class="fs-6 p-2 text-center  "  style="font-weight: 500; width: 360px; color: #6c4141; max-width: 367px; ">         
+                                <span>{{category.category_description}}</span>
+
+                        </th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">
+                            <button class="btn btn-info"><a  href="#!/category/edit/{{category.id}}"><i class="lni lni-pencil"></i></a></button>
+                            <div class="modal fade" id="myModal-{{category.id}}">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <!-- Modal Header -->
+                                  <div class="modal-header">
+                                    <h4 class="modal-title fs-5 fw-medium">Xóa Danh mục</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                  </div>
+                            
+                                  <!-- Modal body -->
+                                  <div class="modal-body fs-6 fw-normal">
+                                   Bạn có chắc muốn xóa thành phần khỏ danh sách vì nó có thể ảnh hưởng đến những thành phần khác trong ứng dụng.
+                                  </div>
+                            
+                                  <!-- Modal footer -->
+                                  <div class="modal-footer">
+                                  <button type="button" class="btn btn-success" data-bs-target="#confirm" ng-click="deleteCategory(category.id)" data-bs-toggle="modal">Đồng ý</button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                                  </div>
+                            
+                                </div>
+                              </div>
+                            </div>
+                            <button class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#myModal-{{category.id}}" ><i class="lni lni-trash-can"></i></button>
+                        </th>
+                    </tr>
+                </tbody>
+               </table>
+            </div>
+        </div>
+    </div>
+</main>
+  <div class="modal fade " id="confirm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title fs-5 fw-medium">Xóa thành phần</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body fs-6 fw-normal">
+           Xóa thành công
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đồng ý</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>

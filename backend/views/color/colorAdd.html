@@ -1,0 +1,37 @@
+<main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+            <nav aria-label="breadcrumb mb-2">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Color</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Color Add</li>
+                </ol>
+              </nav>
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <h5 class="fw-bolder fs-7 mb-3 pt-5 text-center"> thêm màu sắc</h5>
+                    <form action="#" name="form" ng-submit="hanldeAddColors()" novalidate>
+                       <div class="form-group pt-2">
+                        <label for="">Tên màu</label>
+                        <input type="text" class="form-control" name="name" value="" ng-model="name" required >
+                        <span ng-show="form.name.$touched && form.name.$error.required">Trường này không được để trống</span>                        
+                       </div> 
+                       <div class="form-group pt-2">
+                        <label for="">Mã màu</label>
+                        <input style="width: 100px;" type="color" name="color" class="form-control" required value="" ng-model="code_color" >
+                        <span ng-show="form.color.$touched && form.color.$error.required">Trường này không được để trống</span>    
+                       </div> 
+                    
+                       <div class="btn-submit pt-4">
+                        <button style="background-color: #0e2238; color: white;" class="btn">Gửi</button>
+                       </div>
+                    </form>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+</main>

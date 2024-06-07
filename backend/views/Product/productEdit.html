@@ -1,0 +1,96 @@
+<main class="content px-3 py-4">
+  <div class="container-fluid">
+      <div class="mb-3">
+          <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+          <nav aria-label="breadcrumb mb-2">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Product</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product Edit</li>
+              </ol>
+            </nav>
+          <div class="row">
+              <div class="col-md-8 m-auto">
+                  <h5 class="fw-bolder fs-7 mb-3 pt-5 text-center">Sửa sản phẩm</h5>
+                  <form action="#" ng-submit="handleeditProduct()" name="form" novalidate>
+                      <div class="form-group pt-4">
+                          <label for="">Thương hiệu</label>
+                          <select class="form-select" ng-model="inputProductValue.category.category_id" aria-label="Default select example">
+                            <option ng-repeat="category in categorys" value="{{category.id}}">{{category.category_name}}</option>                      
+                            </select>
+                      </div> 
+                     <div class="form-group pt-4">
+                      <label for="">Tên sản phẩm </label>
+                      <input required type="text" class="form-control" name="name" ng-model="inputProductValue.name">
+                      <span ng-show="form.name.$touched && form.name.$error.required ">Trường này không được để trống</span>
+                     </div> 
+                     <div class="form-group pt-4">
+                      <label for="">Giá sản phẩm </label>
+                      <input required type="number" class="form-control" name="price" ng-model="inputProductValue.price">
+                      <span ng-show="form.price.$touched && form.price.$error.required ">Trường này không được để trống</span>
+                      <span ng-show="form.price.$touched && form.price.$error.number">Giá phải là số</span>
+                     </div> 
+                     <div class="form-group pt-4">
+                      <label for="">Mô tả</label>
+                      <textarea name="description" required class="form-control" id="" cols="30" rows="10" ng-model="inputProductValue.product_description"></textarea>
+                      <span ng-show="form.description.$touched && form.description.$error.required ">Trường này không được để trống</span>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="avatar">Avatar</label>
+                      <input required type="text" id="avatar" name="avatar" ng-model="inputProductValue.avatar" class="form-control">
+                      <span ng-show="form.avatar.$touched && form.avatar.$error.required ">Trường này không được để trống</span>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="slider">Slider</label>
+                      <div class="slider form-group row">
+                        <div class="col-md-12 pt-2 mb-1" ng-repeat="item in slider track by $index">
+                          <span style="font-size: 13px; vertical-align: middle; font-weight: 500; white-space: nowrap; color: #0e2238;" class=" mb-2">Slider input:</span>
+                          <div class="form-slider d-flex ">
+                            <input required style="height: 30px ;" name="slider"  type="text" ng-model="item.value" class="form-control d-inline" >
+                            <span ng-if="$index > 0" style="height: 30px; padding: 0 10px 0 10px;" ng-click="deleteHanlderSlider($index)"  class=" ms-2 btn btn-danger">
+                              <i style="vertical-align: middle; cursor: pointer;" class="lni lni-trash-can"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <span style="height: 30px; padding: 0 10px 0 10px;" ng-click="handleAddSliderItem()" class=" ms-2 w-50 m-auto btn btn-secondary">
+                        <i style="vertical-align: middle; cursor: pointer;" class="lni lni-plus"></i>
+                      </span>
+                      <br>
+                      <span ng-show="form.slider.$touched && form.slider.$error.required ">Trường này không được để trống</span>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="">Mã màu</label>
+                      <br>
+                      <div class="form-check form-check-inline" ng-repeat="color in colorItem ">
+                          <input required class="form-check-input " style="vertical-align: middle;" type="checkbox" id="inlineCheckbox1" ng-model="color.checkbox">
+                          <span  class="show-cokor d-inline-block pe-1" ng-style="renderColorElemet(color.lable)">
+                          </span>
+                      </div>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="">Size</label>
+                      <input required type="text" name="size" class="form-control" ng-model="sizes">
+                      <span ng-show="form.size.$touched && form.size.$error.required ">Trường này không được để trống</span>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="">Lượt xem</label>
+                      <input required type="number" name="view" class="form-control" ng-model="inputProductValue.views">
+                      <span ng-show="form.view.$touched && form.view.$error.required ">Trường này không được để trống</span>
+                        <span ng-show="form.view.$touched && form.view.$error.number">Giá phải là số</span>
+                     </div>
+                     <div class="form-group pt-4">
+                      <label for="">Lượt bán</label>
+                      <input required type="number" name="total_buy" class="form-control" ng-model="inputProductValue.total_buy">
+                      <span ng-show="form.total_buy.$touched && form.total_buy.$error.required ">Trường này không được để trống</span>
+                      <span ng-show="form.total_buy.$touched && form.total_buy.$error.number">Giá phải là số</span>
+                     </div>
+                     <div class="btn-submit pt-4">
+                      <button style="background-color: #0e2238; color: white;" class="btn">Gửi</button>
+                     </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>

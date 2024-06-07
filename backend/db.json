@@ -1,0 +1,362 @@
+{
+  "category": [
+    {
+      "id": "f9fe",
+      "category_name": "Adidas",
+      "category_description": "dsadasdas"
+    },
+    {
+      "category_name": "Nike",
+      "category_description": "ddsa",
+      "id": "c1ad"
+    }
+  ],
+  "products": [
+    {
+      "id": "1282",
+      "name": "Nike Air Max 1 Anniversary",
+      "price": "42500000",
+      "product_description": "Hiện đại và thời trang khi diện item mới của Nike. Màu sắc lạ mắt, chất liệu thoáng mát, nhẹ nhàng, phù hợp với những chàng trai yêu phong cách sports.\n\n\nChất liệu cao cấp EVA, PU, Cushlon, Phylon.\nBền, chống bám bẩn, dễ dàng lau chùi. Mũi giày đầy đặn, form dáng chuẩn.\nBảo vệ đầu ngón chân khi hoạt động. Có lớp lót đệm bên trong.\nÊm, di chuyển nhiều không bị đau chân. Cổ giày thiết kế đơn giản, vừa vặn.\nDi chuyển dễ dàng, thoải mái.\nĐế bằng chất liệu cao su\nÊm ái, độ bám tốt, chống trơn trượt.",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "e730  "
+      },
+      "colors": [
+        {
+          "color_name": "Đen",
+          "code_color": "#400040"
+        },
+        {
+          "color_name": "Vàng",
+          "code_color": "#ffff80"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/801821_01_c5fc27c49c9044aab0fa63a5e62cebe0_master.jpg",
+        "https://product.hstatic.net/1000375638/product/801821_02_f8c35a570392475d96c39568ad9873e9_master.jpg",
+        "https://product.hstatic.net/1000375638/product/801821_03_a2a0ab936fe14aa1b068e6a026894f27_master.jpg",
+        "https://product.hstatic.net/1000375638/product/801821_04_a10834510439469cbec4c9ce1ca542dd_master.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/801821_01_c5fc27c49c9044aab0fa63a5e62cebe0_grande.jpg",
+      "total_buy": "120",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "45"
+      ],
+      "created_at": 1711872255751,
+      "views": "120"
+    },
+    {
+      "id": "6800",
+      "name": "Adidas PW Solar HU NMD \"Inspiration Pack\"",
+      "price": 6000000,
+      "product_description": "Hiện đại và thời trang khi diện item mới của Adidas. Màu sắc lạ mắt, chất liệu thoáng mát, nhẹ nhàng, phù hợp với những chàng trai yêu phong cách sports.\n\n\nChất liệu cao cấp EVA, PU, Cushlon, Phylon.\nBền, chống bám bẩn, dễ dàng lau chùi. Mũi giày đầy đặn, form dáng chuẩn.\nBảo vệ đầu ngón chân khi hoạt động. Có lớp lót đệm bên trong.\nÊm, di chuyển nhiều không bị đau chân. Cổ giày thiết kế đơn giản, vừa vặn.\nDi chuyển dễ dàng, thoải mái.\nĐế bằng chất liệu cao su\nÊm ái, độ bám tốt, chống trơn trượt.",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "e730"
+      },
+      "colors": [
+        {
+          "color_name": "Kem",
+          "code_color": "#fdfaef"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_master.jpg",
+        "https://product.hstatic.net/1000375638/product/805266_03_1305bf35bd504318b5b49b2515cee194_master.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg",
+      "total_buy": 250,
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "created_at": 1712051965366,
+      "views": 25550
+    },
+    {
+      "id": "0d43",
+      "name": "Nike Air Max 97 Premium",
+      "price": 1500000,
+      "product_description": "Hiện đại và thời trang khi diện item mới của Nike. Màu sắc lạ mắt, chất liệu thoáng mát, nhẹ nhàng, phù hợp với những chàng trai yêu phong cách sports.\n\n\nChất liệu cao cấp EVA, PU, Cushlon, Phylon.\nBền, chống bám bẩn, dễ dàng lau chùi. Mũi giày đầy đặn, form dáng chuẩn.\nBảo vệ đầu ngón chân khi hoạt động. Có lớp lót đệm bên trong.\nÊm, di chuyển nhiều không bị đau chân. Cổ giày thiết kế đơn giản, vừa vặn.\nDi chuyển dễ dàng, thoải mái.\nĐế bằng chất liệu cao su\nÊm ái, độ bám tốt, chống trơn trượt.",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "e730"
+      },
+      "colors": [
+        {
+          "color_name": "Vàng",
+          "code_color": "#ffff80"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/806032_01_89d6d278c4984b6aaad829e8feb08ff8_master.jpg",
+        "https://product.hstatic.net/1000375638/product/806032_02_93f10da814884f8e85dbff9d9e4ac81f_master.jpg",
+        "https://product.hstatic.net/1000375638/product/806032_03_2f60807458144be699c2e39bd656e9a2_master.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/806032_01_89d6d278c4984b6aaad829e8feb08ff8_master.jpg",
+      "total_buy": 5,
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42"
+      ],
+      "created_at": 1712221480595,
+      "views": 13
+    },
+    {
+      "id": "89af",
+      "name": "The 10: Nike Air Presto \"Off White\"",
+      "price": 8000000,
+      "product_description": "Hiện đại và thời trang khi diện item mới của Nike. Màu sắc lạ mắt, chất liệu thoáng mát, nhẹ nhàng, phù hợp với những chàng trai yêu phong cách sports.\n\n\nChất liệu cao cấp EVA, PU, Cushlon, Phylon.\nBền, chống bám bẩn, dễ dàng lau chùi. Mũi giày đầy đặn, form dáng chuẩn.\nBảo vệ đầu ngón chân khi hoạt động. Có lớp lót đệm bên trong.\nÊm, di chuyển nhiều không bị đau chân. Cổ giày thiết kế đơn giản, vừa vặn.\nDi chuyển dễ dàng, thoải mái.\nĐế bằng chất liệu cao su\nÊm ái, độ bám tốt, chống trơn trượt.",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "e730"
+      },
+      "colors": [
+        {
+          "color_name": "Trắng",
+          "code_color": "#ffffff"
+        },
+        {
+          "color_name": "Đen",
+          "code_color": "#000000"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/804113_01_8afb9ba886124873bee6e0b3085b0208_master.jpg",
+        "https://product.hstatic.net/1000375638/product/804113_02_18fd176e1b014f4b91167909d84cfb5b_master.jpg",
+        "https://product.hstatic.net/1000375638/product/804113_03_16600a86f38e4810bd7895d8e54940ba_master.jpg",
+        "https://product.hstatic.net/1000375638/product/804113_04_14ad48e0c1144b839587eae365dc3e3c_master.jpg",
+        "https://product.hstatic.net/1000375638/product/804113_05_aec8fd1312804e5895755eb16b9d3da4_master.jpg",
+        "https://product.hstatic.net/1000375638/product/803977_01_3913c493d60549748320d5d7f1e876ee_master.jpg",
+        "https://product.hstatic.net/1000375638/product/803977_03_8c5c2a5f31e34d63aaefd936e2206033_master.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/804113_01_8afb9ba886124873bee6e0b3085b0208_master.jpg",
+      "total_buy": 3,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "35"
+      ],
+      "created_at": 1712221870848,
+      "views": 12
+    },
+    {
+      "id": "90c9",
+      "name": "đâsd",
+      "price": 3000,
+      "product_description": "dasdas",
+      "category": {
+        "category_name": "Adidas",
+        "category_id": "f9fe"
+      },
+      "colors": [
+        {
+          "color_name": "Vàng",
+          "code_color": "#ffff80"
+        },
+        {
+          "color_name": "Cam",
+          "code_color": "#fb4727"
+        }
+      ],
+      "slider": [
+        "dasdas"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/801821_01_c5fc27c49c9044aab0fa63a5e62cebe0_grande.jpg",
+      "total_buy": 12,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "35"
+      ],
+      "created_at": 1712311417777,
+      "views": 120
+    },
+    {
+      "id": "b468",
+      "name": "dasd",
+      "price": 1000000,
+      "product_description": "dasdasd",
+      "category": {
+        "category_name": "Adidas",
+        "category_id": "f9fe"
+      },
+      "colors": [
+        {
+          "color_name": "Vàng",
+          "code_color": "#ffff80"
+        },
+        {
+          "color_name": "Cam",
+          "code_color": "#fb4727"
+        }
+      ],
+      "slider": [
+        "dasdas"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/801821_01_c5fc27c49c9044aab0fa63a5e62cebe0_grande.jpg",
+      "total_buy": 12,
+      "sizes": [
+        "39"
+      ],
+      "created_at": 1712311478364,
+      "views": 12
+    },
+    {
+      "id": "68fc",
+      "name": "dasd",
+      "price": 500000,
+      "product_description": "dasdas",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "c1ad"
+      },
+      "colors": [
+        {
+          "color_name": "Kem",
+          "code_color": "#fdfaef"
+        },
+        {
+          "color_name": "Trắng",
+          "code_color": "#ffffff"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg",
+      "total_buy": 13,
+      "sizes": [
+        "38",
+        "39",
+        "40",
+        "35"
+      ],
+      "created_at": 1712311518681,
+      "views": 123
+    },
+    {
+      "id": "76e1",
+      "name": "dasdas",
+      "price": 500000,
+      "product_description": "dasd",
+      "category": {
+        "category_name": "Adidas",
+        "category_id": "f9fe"
+      },
+      "colors": [
+        {
+          "color_name": "Vàng",
+          "code_color": "#ffff80"
+        },
+        {
+          "color_name": "Cam",
+          "code_color": "#fb4727"
+        }
+      ],
+      "slider": [
+        "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/805266_02_b8b2cdd1782246febf8879a44a7e5021_grande.jpg",
+      "total_buy": 13,
+      "sizes": [
+        "38",
+        "39",
+        "40"
+      ],
+      "created_at": 1712311564049,
+      "views": 123
+    },
+    {
+      "id": "fc0a",
+      "name": "jhgjh",
+      "price": 44,
+      "product_description": "gdbvcbvc",
+      "category": {
+        "category_name": "Nike",
+        "category_id": "c1ad"
+      },
+      "colors": [],
+      "slider": [
+        "dasd"
+      ],
+      "avatar": "https://product.hstatic.net/1000375638/product/801821_01_c5fc27c49c9044aab0fa63a5e62cebe0_grande.jpg",
+      "total_buy": 222,
+      "sizes": [
+        "44"
+      ],
+      "created_at": 1712311917967,
+      "views": 6666
+    }
+  ],
+  "cart": [
+    {
+      "id": "9734",
+      "color": "Vàng",
+      "size": "39",
+      "quanlity": 5,
+      "product_name": "Nike Air Max 97 Premium",
+      "total_price": 7500000,
+      "price": 1500000,
+      "product_id": "0d43",
+      "userId": "1",
+      "product_avatar": "https://product.hstatic.net/1000375638/product/806032_01_89d6d278c4984b6aaad829e8feb08ff8_master.jpg"
+    },
+    {
+      "id": "b055",
+      "color": "Vàng",
+      "size": "40",
+      "quanlity": 2,
+      "product_name": "Nike Air Max 1 Anniversary",
+      "total_price": 85000000,
+      "price": "42500000",
+      "product_id": "1282",
+      "userId": "1"
+    }
+  ],
+  "Colors": [
+    {
+      "id": "df19",
+      "name": "Vàng",
+      "code_color": "#ffff80"
+    },
+    {
+      "id": "49fc",
+      "name": "Cam",
+      "code_color": "#fb4727"
+    },
+    {
+      "id": "4b23",
+      "name": "Kem",
+      "code_color": "#fdfaef"
+    },
+    {
+      "name": "Trắng",
+      "code_color": "#ffffff",
+      "id": "64aa"
+    },
+    {
+      "id": "beaf",
+      "name": "Đen",
+      "code_color": "#000000"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "dobnph33400@fpt.edu.vn",
+      "password": "31102004",
+      "privilege_id": "1",
+      "privilege_name": "admin",
+      "privilege_avatar": ""
+    }
+  ]
+}

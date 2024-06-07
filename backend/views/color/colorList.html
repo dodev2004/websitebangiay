@@ -1,0 +1,106 @@
+<main class="content px-3 py-4">
+    <div class="container-fluid">
+        <div class="mb-3">
+            <h3 class="fw-bolder fs-7 mb-3">Danh mục</h3>
+            <nav aria-label="breadcrumb mb-2">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Home</a></li>
+                  <li class="breadcrumb-item"><a href="#" class="fs-7 fw-normal">Category</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Category Edit</li>
+                </ol>
+              </nav>
+            <div class="row w-75 m-auto mt-5 mb-5">
+               <table class="table table-striped">
+                <thead>
+                    <tr >
+                        <th scope="col" class="fs-6 p-2 text-center background: #0e2238;" style="font-weight: 600; background-color: #0e2238; color: white;">ID</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">COLOR</th>
+                        <th scope="col"  class="fs-6 p-2 text-center background: #0e2238;"  style="font-weight: 600; background-color: #0e2238; color: white;">ACTION</th>   
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #0e2238; " class="" ng-repeat="colorItem in data">
+                        <th  class="fs-6 p-2 text-center " style="font-weight: 500; color: #6c4141;">{{colorItem.id}}</th>
+                        <th  class="fs-6 p-2 text-center position-relative"  style="font-weight: 500; color: #6c4141;">
+                            <span class="show-cokor" ng-style="renderColorElemet(colorItem.code_color)"   ng-mouseover="handlemousOver(colorItem.id)" ng-mouseleave="handlemouseLeave(colorItem.id)"></span>
+                            <div class="popover-hover bg-white "  ng-mouseover="handlemousOver(colorItem.id)" data-id="{{colorItem.id}}" ng-mouseleave="handlemouseLeave(colorItem.id)">
+                                <div class="popover-hover_content">
+                                    <ul class="p-1"> 
+                                        <li class="pb-1" style="float:left">
+                                            <div class="d-flex">
+                                                <strong style="font-size: 12px;" class="me-2">Code: </strong>
+                                            <span style="font-size: 12px;">{{colorItem.code_color}}</span>
+                                            </div>
+                                        </li>
+                                        <li class="" style="float:left">
+                                            <div class="d-flex">
+                                                <strong style="font-size: 12px;" class="me-2">Name: </strong>
+                                                <span style="font-size: 12px;">{{colorItem.name}}</span>
+                                            </div>
+                                          
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </th>
+                        <th  class="fs-6 p-2 text-center "  style="font-weight: 500; color: #6c4141;">
+                            <button class="btn btn-info" ><a href="#!/color/edit/{{colorItem.id}}"><i class="lni lni-pencil" ></i></a></button>
+                            <button class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#myModal"><i class="lni lni-trash-can"></i></button>
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                      <h4 class="modal-title fs-5 fw-medium">Xóa thành phần</h4>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                              
+                                    <!-- Modal body -->
+                                    <div class="modal-body fs-6 fw-normal">
+                                     Bạn có chắc muốn xóa thành phần khỏ danh sách vì nó có thể ảnh hưởng đến những thành phần khác trong ứng dụng.
+                                    </div>
+                              
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-target="#confirm" ng-click="handleDelete(colorItem.id)" data-bs-toggle="modal">Đồng ý</button>
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Hủy bỏ</button>
+                                    </div>
+                              
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="modal fade " id="confirm">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                              
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                      <h4 class="modal-title fs-5 fw-medium">Xóa thành phần</h4>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                              
+                                    <!-- Modal body -->
+                                    <div class="modal-body fs-6 fw-normal">
+                                       Xóa thành công
+                                    </div>
+                              
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đồng ý</button>
+                                    </div>
+                              
+                                  </div>
+                                </div>
+                            </div>
+                            
+                        </th>
+                    </tr>
+                </tbody>
+               </table>
+            </div>
+        </div>
+    </div>
+  
+</main>
+
+

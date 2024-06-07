@@ -1,0 +1,120 @@
+
+<div class="breadcrump">
+    <div class="container">
+        <div class="breadcrump-list">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">Trang chủ</li>
+                  <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+</div>
+ <main class="pt-5">
+    <div class="container">
+        <div class="section section-detail">
+            <div class="row row-m-15-15">
+                <div class="col-md-7 padding-0-15">
+                    <div class="section section-image d-flex">
+                        <div class="product-image_small ">
+                          <div class="image-small_item" ng-repeat="image in product.slider" >
+                            <img src="{{image}}" ng-click="handleClickSlider()" data-image="{{image}}"  alt="">
+                          </div>
+                        </div>
+                        <div class="product-image_big">
+                            <img src="{{product.slider[0]}}" alt="">
+                        </div>
+                    </div>
+                    <div class="product-detail_description">
+                        <p class="product-detail_description_title">
+                            Mô tả
+                        </p>
+                        {{product.product_description}}
+                    </div>
+                </div>
+                <div class="col-md-5 padding-0-15">
+                    <div class="product-detail " style="position: sticky; top: 10px;">
+                            <div class="product-detail_name">
+                                <h4 class="fw-700 position-relative">{{product.name}}</h4>
+                                <span >SKU: {{product.id}}</span>
+                            </div>
+                           <h2 class="product-detail_price">{{VND.format(product.price)}}</h2>
+                          <form action="" class="form-details">
+                            <div class="header">
+                                <span>Màu sắc : {{colorTitle}}</span>
+                            </div>
+                            <div class="select_swap">
+                                <div class="select_swap-color" ng-repeat="color in product.colors" " data-color-index="{{color.code_color}}">
+                                       <input type="text" class="d-none" id="select_color" name="color"  ng-model="color">
+                                       <label for="select_color" >
+                                        <span class="select_color" data-value="{{color.color_name}}" ng-click="handleClickColor()" ng-mouseover="handlemouseoverColor()" ng-style="renderColorElemet(color.code_color)">{{color.color_name}}</span>
+                                       </label>         
+                                </div>
+                               
+                            </div>
+                            <input type="number" ng-model="priceCart" class="d-none">
+                            <div class="select-swatch-01">
+                                <div class="select_swap">
+                                    <div class="btn-size" ng-repeat="size in product.sizes">
+                                        <input type="radio" class="d-none" id="sizes" name="id" ng-model="sizes" >
+                                        <label for="sizes" data-value="{{size}}" ng-click="handleClickSize()" >
+                                                {{size}}
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="select-swatch-02">
+                                <div class="btn-quanlity">
+                                    <input type="button" value="-"  ng-click="handleDecrease()" class="quanlity-decrease">
+                                    <input type="text" ng-model="quanlity" value="1" min="1" class="quanlity-input">
+                                    <input type="button" value="+" ng-click="handleIncrease()" class="quanlity-increase">
+                                </div>
+                            </div>
+                            <div class="select-swatch-03">
+                                <div class="btn-cart">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="btn-cart_add ">
+                                                <a href="./card.html" ng-click="handleAddCart()" title="View Detail" class="fui-button-shiny-2 text-decoration-none text-center">Thêm vào giỏ hàng</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="btn-cart_add">
+                                                <a href="#" title="View Detail" class="fui-button-shiny-2 text-decoration-none bg-red text-center">Mua Hàng </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-product_top text-center">
+            <p class="section-product_title">Sản phẩm tương tự</p>
+            <span>Xem thêm</span>
+   </div>
+
+   <div class="product-news">
+       <div class="product-news_content">
+           <div class="row">
+               <div class="col-md-3 pro-loop " ng-repeat="productByCate in productByCates">
+                   <div class="product_news-imgae">
+                       <a href=""> <img src="{{productByCate.avatar}}" alt=""></a>
+                      
+                   </div>
+                   <div class="product_news-content text-center">
+                       <p class="product_news-name m-0">{{productByCate.name}}</p>
+                       <span class="product_news-price">{{VND.format(productByCate.price)}}</span>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+    </div>
+
+   </main>
